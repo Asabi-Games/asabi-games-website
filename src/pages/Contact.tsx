@@ -82,11 +82,11 @@ const Contact = () => {
                     Email
                   </p>
                   <a
-                    href="mailto:hello@asabigames.com"
+                    href="mailto:info@asabigames.com"
                     className="text-lg md:text-xl hover:text-[#e84545] transition-colors duration-200"
                     style={{ color: '#e2e8f0', opacity: 1 }}
                   >
-                    hello@asabigames.com
+                    info@asabigames.com
                   </a>
                 </div>
               </div>
