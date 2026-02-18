@@ -105,7 +105,7 @@ const Contact = () => {
                     className="text-lg md:text-xl"
                     style={{ color: '#e2e8f0', opacity: 1 }}
                   >
-                    Istanbul, Turkey
+                    Ankara, Turkey
                   </p>
                 </div>
               </div>
