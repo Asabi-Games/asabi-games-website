@@ -24,27 +24,14 @@ const Home = () => {
     },
   };
 
-  // Featured games data
-  const games = [
-    {
-      name: 'Shadow Quest',
-      description: 'Embark on an epic RPG adventure through mysterious realms. Battle fierce enemies, collect legendary gear, and uncover ancient secrets.',
-      gradient: 'from-purple-900/30 via-blue-900/30 to-[#0a0b1a]',
-      viewLink: '/games',
-    },
-    {
-      name: 'Pixel Survivors',
-      description: 'Survive waves of enemies in this roguelike action game. Build your character, unlock powerful abilities, and fight until the end.',
-      gradient: 'from-red-900/30 via-orange-900/30 to-[#0a0b1a]',
-      viewLink: '/games',
-    },
-    {
-      name: 'Mind Grid',
-      description: 'Challenge your mind with innovative puzzles. Think strategically, solve complex patterns, and unlock new dimensions of gameplay.',
-      gradient: 'from-emerald-900/30 via-cyan-900/30 to-[#0a0b1a]',
-      viewLink: '/games',
-    },
-  ];
+  // Featured game
+  const featuredGame = {
+    name: 'Clash Of Civilizations',
+    description: 'A tactical semi auto-battler strategy deck and kingdom builder with roguelike elements, where civilizations clash through cards, skills, and infinite scaling strategies.',
+    gradient: 'from-purple-900/30 via-blue-900/30 to-[#0a0b1a]',
+    image: '/COCIcon.jpg',
+    googlePlayLink: 'https://play.google.com/store/apps/details?id=com.asabi.AutoBattlerStrategy',
+  };
 
   return (
     <div className="relative">
@@ -92,72 +79,71 @@ const Home = () => {
         </motion.div>
       </section>
 
-      {/* FEATURED GAMES SECTIONS */}
-      {games.map((game, index) => (
-        <motion.section
-          key={game.name}
-          className={`relative py-20 md:py-32 bg-gradient-to-br ${game.gradient}`}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-          variants={fadeInUp}
-        >
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} items-center gap-12 md:gap-16`}>
-              {/* Game Info */}
-              <div className="flex-1 text-center md:text-left">
-                <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6" style={{ color: '#ffffff', opacity: 1 }}>
-                  {game.name}
-                </h2>
-                <p className="text-lg md:text-xl mb-8 leading-relaxed" style={{ color: '#e2e8f0', opacity: 0.95 }}>
-                  {game.description}
-                </p>
+      {/* FEATURED GAME SECTION */}
+      <motion.section
+        className={`relative py-20 md:py-32 bg-gradient-to-br ${featuredGame.gradient}`}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        variants={fadeInUp}
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center gap-12 md:gap-16">
+            {/* Game Info */}
+            <div className="flex-1 text-center md:text-left">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6" style={{ color: '#ffffff', opacity: 1 }}>
+                {featuredGame.name}
+              </h2>
+              <p className="text-lg md:text-xl mb-8 leading-relaxed" style={{ color: '#e2e8f0', opacity: 0.95 }}>
+                {featuredGame.description}
+              </p>
 
-                {/* Store Buttons */}
-                <div className="flex flex-wrap gap-4 justify-center md:justify-start mb-6">
-                  <a
-                    href="#"
-                    className="flex items-center gap-2 bg-white text-black px-6 py-3 rounded-lg font-medium hover:bg-gray-200 transition-all duration-200 hover:scale-105"
-                  >
-                    <FaApple className="text-2xl" />
-                    <div className="text-left">
-                      <div className="text-xs">Download on the</div>
-                      <div className="text-sm font-bold">App Store</div>
-                    </div>
-                  </a>
-                  <a
-                    href="#"
-                    className="flex items-center gap-2 bg-white text-black px-6 py-3 rounded-lg font-medium hover:bg-gray-200 transition-all duration-200 hover:scale-105"
-                  >
-                    <FaGooglePlay className="text-xl" />
-                    <div className="text-left">
-                      <div className="text-xs">GET IT ON</div>
-                      <div className="text-sm font-bold">Google Play</div>
-                    </div>
-                  </a>
-                </div>
-
-                {/* View Game Button */}
-                <Link
-                  to={game.viewLink}
-                  className="inline-block bg-[#e84545] text-white px-8 py-4 rounded-lg font-medium hover:bg-[#ff5555] transition-all duration-200 hover:scale-105 hover:shadow-[0_0_30px_rgba(232,69,69,0.5)]"
+              {/* Store Buttons */}
+              <div className="flex flex-wrap gap-4 justify-center md:justify-start mb-6">
+                <a
+                  href="#"
+                  className="flex items-center gap-2 bg-white text-black px-6 py-3 rounded-lg font-medium hover:bg-gray-200 transition-all duration-200 hover:scale-105"
                 >
-                  View Game
-                </Link>
+                  <FaApple className="text-2xl" />
+                  <div className="text-left">
+                    <div className="text-xs">Download on the</div>
+                    <div className="text-sm font-bold">App Store</div>
+                  </div>
+                </a>
+                <a
+                  href={featuredGame.googlePlayLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 bg-white text-black px-6 py-3 rounded-lg font-medium hover:bg-gray-200 transition-all duration-200 hover:scale-105"
+                >
+                  <FaGooglePlay className="text-xl" />
+                  <div className="text-left">
+                    <div className="text-xs">GET IT ON</div>
+                    <div className="text-sm font-bold">Google Play</div>
+                  </div>
+                </a>
               </div>
 
-              {/* Game Image Placeholder */}
-              <div className="flex-1 w-full">
-                <div className="aspect-[4/3] bg-gradient-to-br from-[#12132a] to-[#1e293b] rounded-2xl shadow-2xl flex items-center justify-center border border-[#1e293b]">
-                  <span className="text-3xl md:text-4xl font-bold text-white/30">
-                    {game.name}
-                  </span>
-                </div>
-              </div>
+              {/* View Game Button */}
+              <Link
+                to="/games"
+                className="inline-block bg-[#e84545] text-white px-8 py-4 rounded-lg font-medium hover:bg-[#ff5555] transition-all duration-200 hover:scale-105 hover:shadow-[0_0_30px_rgba(232,69,69,0.5)]"
+              >
+                View Game
+              </Link>
+            </div>
+
+            {/* Game Image */}
+            <div className="flex-1 w-full">
+              <img
+                src={featuredGame.image}
+                alt={featuredGame.name}
+                className="w-full aspect-[4/3] object-cover rounded-2xl shadow-2xl border border-[#1e293b]"
+              />
             </div>
           </div>
-        </motion.section>
-      ))}
+        </div>
+      </motion.section>
 
       {/* OUR PHILOSOPHY SECTION */}
       <motion.section
