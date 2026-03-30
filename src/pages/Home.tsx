@@ -2,6 +2,17 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { FaApple, FaGooglePlay } from 'react-icons/fa';
 
+// Generate star positions once outside the component to avoid re-randomizing on each render
+const stars1Shadow = Array.from({ length: 200 }, () =>
+  `${Math.random() * 2000}px ${Math.random() * 2000}px #FFF`
+).join(',');
+const stars2Shadow = Array.from({ length: 100 }, () =>
+  `${Math.random() * 2000}px ${Math.random() * 2000}px #FFF`
+).join(',');
+const stars3Shadow = Array.from({ length: 50 }, () =>
+  `${Math.random() * 2000}px ${Math.random() * 2000}px #FFF`
+).join(',');
+
 const Home = () => {
   // Animation variants
   const fadeInUp = {
@@ -240,30 +251,21 @@ const Home = () => {
           width: 1px;
           height: 1px;
           background: transparent;
-          box-shadow:
-            ${Array.from({ length: 200 }, () =>
-              `${Math.random() * 2000}px ${Math.random() * 2000}px #FFF`
-            ).join(',')};
+          box-shadow: ${stars1Shadow};
           animation: animateStars 50s linear infinite;
         }
 
         .stars2 {
           width: 2px;
           height: 2px;
-          box-shadow:
-            ${Array.from({ length: 100 }, () =>
-              `${Math.random() * 2000}px ${Math.random() * 2000}px #FFF`
-            ).join(',')};
+          box-shadow: ${stars2Shadow};
           animation: animateStars 100s linear infinite;
         }
 
         .stars3 {
           width: 3px;
           height: 3px;
-          box-shadow:
-            ${Array.from({ length: 50 }, () =>
-              `${Math.random() * 2000}px ${Math.random() * 2000}px #FFF`
-            ).join(',')};
+          box-shadow: ${stars3Shadow};
           animation: animateStars 150s linear infinite;
         }
 
