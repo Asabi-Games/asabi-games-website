@@ -22,45 +22,10 @@ const Games = () => {
   const games = [
     {
       id: 1,
-      name: 'Shadow Quest',
-      slogan: 'EPIC RPG ADVENTURE',
-      imageGradient: 'from-purple-600 via-blue-600 to-indigo-700',
-      iconGradient: 'from-purple-500 to-blue-500',
-    },
-    {
-      id: 2,
-      name: 'Pixel Survivors',
-      slogan: 'SURVIVE THE CHAOS',
-      imageGradient: 'from-red-600 via-orange-600 to-yellow-600',
-      iconGradient: 'from-red-500 to-orange-500',
-    },
-    {
-      id: 3,
-      name: 'Mind Grid',
-      slogan: 'PUZZLE YOUR WAY',
-      imageGradient: 'from-emerald-600 via-teal-600 to-cyan-600',
-      iconGradient: 'from-emerald-500 to-cyan-500',
-    },
-    {
-      id: 4,
-      name: 'Blade Runner',
-      slogan: 'SLASH & DASH',
-      imageGradient: 'from-orange-600 via-amber-600 to-yellow-500',
-      iconGradient: 'from-orange-500 to-yellow-500',
-    },
-    {
-      id: 5,
-      name: 'Tower Defense X',
-      slogan: 'DEFEND YOUR REALM',
-      imageGradient: 'from-blue-600 via-indigo-600 to-purple-600',
-      iconGradient: 'from-blue-500 to-purple-500',
-    },
-    {
-      id: 6,
-      name: 'Cosmic Merge',
-      slogan: 'MERGE & EVOLVE',
-      imageGradient: 'from-pink-600 via-fuchsia-600 to-purple-600',
-      iconGradient: 'from-pink-500 to-purple-500',
+      name: 'Clash Of Civilizations',
+      slug: 'ClashOfCivilizations',
+      slogan: 'TACTICAL AUTO-BATTLER STRATEGY',
+      image: '/COCIcon.jpg',
     },
   ];
 
@@ -120,19 +85,12 @@ const Games = () => {
                 whileHover={{ scale: 1.03 }}
               >
                 {/* Game Image */}
-                <div className="relative aspect-video rounded-xl overflow-hidden mb-8">
-                  <div className={`absolute inset-0 bg-gradient-to-br ${game.imageGradient}`}></div>
-
-                  {/* Game Icon - Half overlapping the image */}
-                  <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 z-10">
-                    <div
-                      className={`w-16 h-16 rounded-full bg-gradient-to-br ${game.iconGradient} border-4 border-[#12132a] shadow-xl flex items-center justify-center`}
-                    >
-                      <span className="text-white text-2xl font-bold">
-                        {game.name.charAt(0)}
-                      </span>
-                    </div>
-                  </div>
+                <div className="relative aspect-video rounded-xl overflow-hidden mb-4">
+                  <img
+                    src={game.image}
+                    alt={game.name}
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
                 </div>
 
                 {/* Game Info */}
@@ -146,7 +104,7 @@ const Games = () => {
 
                   {/* Read More Button */}
                   <Link
-                    to={`/games/${game.id}`}
+                    to={`/games/${game.slug}`}
                     className="inline-block bg-[#e84545] text-white px-6 py-3 rounded-lg font-medium hover:bg-[#ff5555] transition-all duration-200 hover:shadow-[0_0_20px_rgba(232,69,69,0.5)]"
                   >
                     Read More
