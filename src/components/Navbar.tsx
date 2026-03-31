@@ -16,12 +16,12 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="sticky top-0 z-50 bg-[#070810] border-b border-[#1e293b]">
+    <nav className="sticky top-0 z-50 bg-[#070810] border-b border-[#1e293b] overflow-visible">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link to="/" className="text-white font-bold text-xl tracking-wider">
-            ASABI GAMES
+          <Link to="/" className="relative z-50">
+            <img src="/asabi-logo-main-rectangular_transparent.png" alt="Asabi Games" className="h-24 object-contain" />
           </Link>
 
           {/* Desktop Menu */}
