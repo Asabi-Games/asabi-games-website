@@ -112,7 +112,9 @@ const Home = () => {
               {/* Store Buttons */}
               <div className="flex flex-wrap gap-4 justify-center md:justify-start mb-6">
                 <a
-                  href="#"
+                  href="https://apps.apple.com/tr/app/auto-battler-strategy/id6752348520"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex items-center gap-2 bg-white text-black px-6 py-3 rounded-lg font-medium hover:bg-gray-200 transition-all duration-200 hover:scale-105"
                 >
                   <FaApple className="text-2xl" />
