@@ -22,8 +22,8 @@ const Games = () => {
   const games = [
     {
       id: 1,
-      name: 'Clash Of Civilizations',
-      slug: 'ClashOfCivilizations',
+      name: 'Clash Of Realms',
+      slug: 'ClashOfRealms',
       slogan: 'TACTICAL AUTO-BATTLER STRATEGY',
       image: '/COCIcon.jpg',
     },

@@ -10,9 +10,9 @@ const gamesData: Record<string, {
   googlePlayLink: string;
   screenshotFolder: string;
 }> = {
-  ClashOfCivilizations: {
-    name: 'Clash Of Civilizations',
-    description: 'A tactical semi auto-battler strategy deck and kingdom builder with roguelike elements, where civilizations clash through cards, skills, and infinite scaling strategies.',
+  ClashOfRealms: {
+    name: 'Clash Of Realms',
+    description: 'A tactical semi auto-battler strategy deck and kingdom builder with roguelike elements, where realms clash through cards, skills, and infinite scaling strategies.',
     image: '/COCIcon.jpg',
     googlePlayLink: 'https://play.google.com/store/apps/details?id=com.asabi.AutoBattlerStrategy',
     screenshotFolder: '/COC_Screenshots',
