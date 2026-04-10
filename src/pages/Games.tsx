@@ -25,7 +25,7 @@ const Games = () => {
       name: 'Clash Of Realms',
       slug: 'ClashOfRealms',
       slogan: 'TACTICAL AUTO-BATTLER STRATEGY',
-      image: '/COCIcon.jpg',
+      image: '/GameIcon.jpeg',
     },
   ];
 

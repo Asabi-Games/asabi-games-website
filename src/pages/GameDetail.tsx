@@ -13,7 +13,7 @@ const gamesData: Record<string, {
   ClashOfRealms: {
     name: 'Clash Of Realms',
     description: 'A tactical semi auto-battler strategy deck and kingdom builder with roguelike elements, where realms clash through cards, skills, and infinite scaling strategies.',
-    image: '/COCIcon.jpg',
+    image: '/GameIcon.jpeg',
     googlePlayLink: 'https://play.google.com/store/apps/details?id=com.asabi.AutoBattlerStrategy',
     screenshotFolder: '/COC_Screenshots',
   },

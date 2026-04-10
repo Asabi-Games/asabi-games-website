@@ -40,7 +40,7 @@ const Home = () => {
     name: 'Clash Of Realms',
     description: 'A tactical semi auto-battler strategy deck and kingdom builder with roguelike elements, where realms clash through cards, skills, and infinite scaling strategies.',
     gradient: 'from-purple-900/30 via-blue-900/30 to-[#0a0b1a]',
-    image: '/COCIcon.jpg',
+    image: '/GameIcon.jpeg',
     googlePlayLink: 'https://play.google.com/store/apps/details?id=com.asabi.AutoBattlerStrategy',
   };
 
