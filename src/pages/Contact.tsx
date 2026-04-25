@@ -128,7 +128,7 @@ const Contact = () => {
                     <FaTwitter className="text-white text-xl" />
                   </a>
                   <a
-                    href="https://instagram.com"
+                    href="https://www.instagram.com/asabigames?igsh=MWR6cDY5a3VnODN2eQ=="
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-12 h-12 rounded-full bg-[#12132a] border border-[#1e293b] flex items-center justify-center hover:border-[#e84545] hover:bg-[#e84545] transition-all duration-200 hover:scale-110"

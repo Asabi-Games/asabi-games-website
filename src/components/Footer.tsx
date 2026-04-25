@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Footer = () => {
   const socialLinks = [
     { icon: FaTwitter, url: 'https://twitter.com', label: 'Twitter' },
-    { icon: FaInstagram, url: 'https://instagram.com', label: 'Instagram' },
+    { icon: FaInstagram, url: 'https://www.instagram.com/asabigames?igsh=MWR6cDY5a3VnODN2eQ==', label: 'Instagram' },
     { icon: FaLinkedin, url: 'https://linkedin.com', label: 'LinkedIn' },
   ];
 
