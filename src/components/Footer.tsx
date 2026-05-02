@@ -6,6 +6,7 @@ const Footer = () => {
     { icon: FaTwitter, url: 'https://twitter.com', label: 'Twitter' },
     { icon: FaInstagram, url: 'https://www.instagram.com/asabigames?igsh=MWR6cDY5a3VnODN2eQ==', label: 'Instagram' },
     { icon: FaLinkedin, url: 'https://linkedin.com', label: 'LinkedIn' },
+    { image: '/discordImage.png', url: 'https://discord.gg/umCQN3Q9F', label: 'Discord' },
   ];
 
   const footerLinks = [
@@ -28,10 +29,14 @@ const Footer = () => {
                 href={social.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#94a3b8] hover:text-[#e84545] transition-colors duration-200 text-2xl"
+                className="text-[#94a3b8] hover:text-[#e84545] transition-colors duration-200 text-2xl flex items-center"
                 aria-label={social.label}
               >
-                <Icon />
+                {Icon ? (
+                  <Icon />
+                ) : (
+                  <img src={social.image} alt={social.label} className="w-7 h-7 rounded-full" />
+                )}
               </a>
             );
           })}

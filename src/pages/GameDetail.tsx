@@ -8,6 +8,7 @@ const gamesData: Record<string, {
   description: string;
   image: string;
   googlePlayLink: string;
+  discordLink: string;
   screenshotFolder: string;
 }> = {
   ClashOfRealms: {
@@ -15,6 +16,7 @@ const gamesData: Record<string, {
     description: 'A tactical semi auto-battler strategy deck and kingdom builder with roguelike elements, where realms clash through cards, skills, and infinite scaling strategies.',
     image: '/GameIcon.jpeg',
     googlePlayLink: 'https://play.google.com/store/apps/details?id=com.asabi.AutoBattlerStrategy',
+    discordLink: 'https://discord.gg/NK2hg7RP',
     screenshotFolder: '/COC_Screenshots',
   },
 };
@@ -102,6 +104,18 @@ const GameDetail = () => {
               <div className="text-left">
                 <div className="text-xs">GET IT ON</div>
                 <div className="text-sm font-bold">Google Play</div>
+              </div>
+            </a>
+            <a
+              href={game.discordLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 bg-[#5865F2] text-white px-6 py-3 rounded-lg font-medium hover:bg-[#4752C4] transition-all duration-200 hover:scale-105"
+            >
+              <img src="/discordImage.png" alt="Discord" className="w-6 h-6 rounded-full" />
+              <div className="text-left">
+                <div className="text-xs">JOIN OUR</div>
+                <div className="text-sm font-bold">Discord</div>
               </div>
             </a>
           </div>
