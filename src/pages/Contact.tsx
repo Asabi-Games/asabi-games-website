@@ -195,6 +195,15 @@ const Contact = () => {
                   />
                 </div>
 
+                {/* How did you hear about us Input */}
+                <div>
+                  <input
+                    type="text"
+                    placeholder="How did you hear about us? (optional)"
+                    className="w-full px-4 py-3 bg-[#12132a] border border-[#1e293b] rounded-lg text-white placeholder-[#94a3b8] focus:outline-none focus:border-[#e84545] transition-colors duration-200"
+                  />
+                </div>
+
                 {/* Message Textarea */}
                 <div>
                   <textarea
