@@ -16,7 +16,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="sticky top-0 z-50 bg-[#070810] border-b border-[#1e293b] overflow-visible">
+    <nav className="sticky top-0 z-50 bg-white border-b border-gray-200 overflow-visible">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -33,7 +33,7 @@ const Navbar = () => {
                 className={`text-sm font-medium tracking-wide transition-colors duration-200 ${
                   isActive(link.path)
                     ? 'text-[#e84545]'
-                    : 'text-[#94a3b8] hover:text-white'
+                    : 'text-gray-600 hover:text-gray-900'
                 }`}
               >
                 {link.label}
@@ -44,7 +44,7 @@ const Navbar = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden text-white text-2xl"
+            className="md:hidden text-gray-900 text-2xl"
           >
             {isMenuOpen ? <FiX /> : <FiMenu />}
           </button>
@@ -53,7 +53,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden bg-[#070810] border-t border-[#1e293b]">
+        <div className="md:hidden bg-white border-t border-gray-200">
           <div className="px-4 py-4 space-y-3">
             {navLinks.map((link) => (
               <Link
@@ -63,7 +63,7 @@ const Navbar = () => {
                 className={`block text-sm font-medium tracking-wide transition-colors duration-200 ${
                   isActive(link.path)
                     ? 'text-[#e84545]'
-                    : 'text-[#94a3b8] hover:text-white'
+                    : 'text-gray-600 hover:text-gray-900'
                 }`}
               >
                 {link.label}
