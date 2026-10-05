@@ -63,7 +63,7 @@ const Home = () => {
           variants={staggerContainer}
         >
           <motion.h1
-            className="text-6xl md:text-8xl lg:text-9xl font-bold tracking-[0.2em] mb-8"
+            className="font-gabato text-6xl md:text-8xl lg:text-9xl font-normal tracking-[0.2em] mb-8"
             style={{ color: '#ffffff', opacity: 1 }}
             variants={fadeIn}
           >

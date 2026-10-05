@@ -1,1 +1,11 @@
 @import "tailwindcss";
+
+@font-face {
+  font-family: 'Gabato';
+  src: url('./assets/gabato/Gabato.ttf') format('truetype');
+  font-display: swap;
+}
+
+@theme {
+  --font-gabato: 'Gabato', sans-serif;
+}
